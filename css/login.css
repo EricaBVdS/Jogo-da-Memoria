@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+  font-family: "Oswald", sans-serif;
+  width: auto;
+  height: 100vh;
+}
+
+.container, .login-form, .login_header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #E7F294;
+}
+
+.login-form{
+  position: relative;
+  padding: 20px;
+  background-color: #F2F2F2;
+  height: 100%;
+  max-height: 250px;
+  width:100%;
+  max-width: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  
+}
+
+.login-form::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 200%;
+  background: linear-gradient(180deg, #0D0D0D, #0D0D0D );
+
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.login-form::after{
+  content: '';
+  position: absolute;
+  background-color: #F2F2F2;
+  inset: 7px;
+  border-radius: 25px;
+}
+
+
+.login_header{
+  justify-content: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.login_header h1{
+  color: #0D0D0D;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 3px #4e4d4d;
+  z-index: 1;
+}
+
+.username_input{
+  border: 2px solid #0D0D0D;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1em;
+  margin-bottom: 15px;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+  outline: none;
+  z-index: 1;
+}
+
+.login_btn{
+  background-color: #0D0D0D;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  width: 100%;
+  max-width: 300px;
+  z-index: 1;
+}
+
+.login_btn:disabled {
+  background-color: #3b3b3b;
+  cursor: auto;
+}
+
+
